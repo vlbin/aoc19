@@ -1,7 +1,9 @@
+from functions import getdata
+
 def main():
 	lines = getdata()
 	intersections = getintersections(lines[0], lines[1])
-	#closest = getclosestintersection(intersections)
+	closest = getclosestintersection(intersections)
 
 
 
@@ -48,16 +50,5 @@ def readinstruction(pos, direction, steps):
 
 		i = i + 1
 	return list
-
-def getdata():
-	file = open('src/day3/input2.txt', 'r')
-	lines = file.read().split("\n")
-	line1 = lines[0]
-	line2 = lines[1]
-	returnlines = []
-	returnlines.append(line1.split(","))
-	returnlines.append(line2.split(","))
-	
-	return returnlines
 
 main()
