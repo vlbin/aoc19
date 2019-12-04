@@ -9,7 +9,7 @@ def main():
 def leaststeps(paths, intersections):
 	steparr = []
 	for intersection in intersections:
-		steparr.append(steps2intersect(paths[0], intersection) + steps2intersect(paths[1], intersection))
+		steparr.append(steps2intersect(paths[0], intersection) +  steps2intersect(paths[1], intersection))
 	steparr.sort()
 	return steparr[0]
 		
